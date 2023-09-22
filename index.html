@@ -1,0 +1,375 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/blossom-apple.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flores para Fanny</title>
+    <script
+      type="module"
+      crossorigin=""
+      src="/assets/index-90d619e8.js"
+    ></script>
+    <style>
+      @import "https://fonts.googleapis.com/css2?family=Mooli&display=swap";
+      #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .logo {
+        height: 6em;
+        padding: 1.5em;
+        will-change: filter;
+        transition: filter 0.3s;
+      }
+
+      .logo:hover {
+        filter: drop-shadow(0 0 2em #646cffaa);
+      }
+
+      .logo.react:hover {
+        filter: drop-shadow(0 0 2em #61dafbaa);
+      }
+
+      @keyframes logo-spin {
+        0% {
+          transform: rotate(0);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        a:nth-of-type(2) .logo {
+          animation: logo-spin infinite 20s linear;
+        }
+      }
+
+      .card {
+        padding: 2em;
+      }
+
+      .read-the-docs {
+        color: #888;
+      }
+
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #ffffffde;
+        background-color: #242424;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      a {
+        font-weight: 500;
+        color: #646cff;
+        text-decoration: inherit;
+      }
+
+      a:hover {
+        color: #535bf2;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 100vh;
+        background: url("https://images.pexels.com/photos/17038848/pexels-photo-17038848/free-photo-of-paisaje-flores-bosque-excursionismo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+      }
+
+      button {
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: #1a1a1a;
+        cursor: pointer;
+        transition: border-color 0.25s;
+      }
+
+      button:hover {
+        border-color: #646cff;
+      }
+
+      button:focus,
+      button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          color: #213547;
+          background-color: #fff;
+        }
+
+        a:hover {
+          color: #747bff;
+        }
+
+        button {
+          background-color: #f9f9f9;
+        }
+      }
+
+      h1 {
+        font-family: Mooli, sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: #333;
+      }
+      h2,
+      p {
+        font-family: Mooli, sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #333;
+      }
+      h3 {
+        font-family: Mooli, sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 30px;
+        color: #fff;
+      }
+      .flower {
+        height: 200px;
+        width: 200px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        animation: pulseFlower 4s ease-in-out infinite;
+        z-index: 1;
+      }
+
+      .flower:hover,
+      .flower:focus {
+        transform: rotate(10deg);
+      }
+
+      .mid {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #000, #ff5e00, #000);
+        z-index: 4;
+        background-size: 5px 5px;
+        filter: drop-shadow(0 0 8px #682600);
+      }
+
+      .Petal1 {
+        position: absolute;
+        left: 40px;
+        z-index: 3;
+        width: 120px;
+        height: 30px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #ff5e00, #ffbb00);
+        filter: drop-shadow(0 0 5px #e05200);
+      }
+
+      .Petal1.p1 {
+        transform: rotate(22.5deg);
+      }
+
+      .Petal1.p2 {
+        transform: rotate(67.5deg);
+      }
+
+      .Petal1.p3 {
+        transform: rotate(110.5deg);
+      }
+
+      .Petal1.p4 {
+        transform: rotate(157.5deg);
+      }
+
+      .Petal2 {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        width: 200px;
+        height: 40px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #ff5e00, #fbd702);
+        filter: drop-shadow(0 0 5px #e05200);
+      }
+
+      .Petal2.p2 {
+        transform: rotate(90deg);
+      }
+
+      .Petal2.p3 {
+        transform: rotate(45deg);
+      }
+
+      .Petal2.p4 {
+        transform: rotate(135deg);
+      }
+
+      .Petal3 {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 200px;
+        height: 40px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #ff5e00, #fbd702);
+        filter: drop-shadow(0 0 2px #fbd702);
+      }
+
+      .Petal3.p1 {
+        transform: rotate(22.5deg);
+      }
+
+      .Petal3.p2 {
+        transform: rotate(67.5deg);
+      }
+
+      .Petal3.p3 {
+        transform: rotate(110.5deg);
+      }
+
+      .Petal3.p4 {
+        transform: rotate(157.5deg);
+      }
+
+      .flower-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        animation: pulse 8s infinite;
+      }
+
+      .leaf-left {
+        position: absolute;
+        left: 0;
+        z-index: 0;
+        width: 100px;
+        height: 20px;
+        border-radius: 50%;
+        transform: rotate(30deg);
+        background: radial-gradient(circle, #9dff00, #01b80d);
+        filter: drop-shadow(0 0 5px #01b80d);
+      }
+
+      .leaf-right {
+        position: absolute;
+        right: 0;
+        z-index: 0;
+        width: 100px;
+        height: 20px;
+        border-radius: 50%;
+        transform: rotate(150deg);
+        background: radial-gradient(circle, #9dff00, #01b80d);
+        filter: drop-shadow(0 0 5px #01b80d);
+      }
+
+      .stem {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        z-index: 0;
+        width: 10px;
+        height: 300px;
+        transform: translate(-50%);
+        background: radial-gradient(circle, #9dff00, #01b80d);
+        filter: drop-shadow(0 0 5px #01b80d);
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.1);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulseFlower {
+        0%,
+        to {
+          transform: scale(1) rotate(0);
+        }
+
+        50% {
+          transform: scale(1.1) rotate(5deg);
+        }
+      }
+
+      @keyframes pulseFlowerInner {
+        0%,
+        to {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Mi Fa ❤️</h1>
+      <h2>
+        "En este día que marca el renacimiento de la naturaleza, quiero
+        recordarte que tu llegada a mi vida fue mi propia primavera. Te dedico
+        esta flor con mucho amor en el primer dia de primavera Mi Corazon de
+        Pato 😍."
+      </h2>
+      <div class="flower">
+        <div class="mid"></div>
+        <div class="Petal1 p1"></div>
+        <div class="Petal1 p2"></div>
+        <div class="Petal1 p3"></div>
+        <div class="Petal1 p4"></div>
+        <div class="Petal2 p1"></div>
+        <div class="Petal2 p2"></div>
+        <div class="Petal2 p3"></div>
+        <div class="Petal2 p4"></div>
+        <div class="Petal3 p1"></div>
+        <div class="Petal3 p2"></div>
+        <div class="Petal3 p3"></div>
+        <div class="Petal3 p4"></div>
+      </div>
+      <div class="flower-container">
+        <div class="leaf-left"></div>
+        <div class="leaf-right"></div>
+        <div class="stem"></div>
+      </div>
+      <h3>Con amor, de tu Joe que te ama muchisisisimo.</h3>
+    </div>
+  </body>
+</html>
